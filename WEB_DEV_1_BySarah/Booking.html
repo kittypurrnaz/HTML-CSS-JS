@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+<head>
+<title> Tiny Hotel </title>    
+<!------------------------- css ------------------------------------->
+<style>    
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+.hero
+{
+    width: 100%;
+    height: 100vh;
+    /* this is for the text overlay over the video */
+    background-image: linear-gradient(rgba(12,3,51,0.3),rgba(12,3,51,0.3));
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+nav
+{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .logo
+{
+    width: 70px;
+}
+nav ul li
+{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+nav ul li a
+{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 17px;
+}
+.content
+{
+    text-align: center;
+}
+.content h1
+{
+    font-size: 160px;
+    font-family: serif;
+    color: aliceblue;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.content h1:hover
+{
+    -webkit-text-stroke: 2px aliceblue;
+    color: transparent;
+}
+.content a
+{
+    text-decoration: none;
+    display: inline-block;
+    color: aliceblue;
+    font-size: 24px;
+    border: 0px solid aliceblue;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+}    
+.bg-video
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media (min-aspect-ratio: 16/9)
+{
+    .bg-video
+    {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9)
+{
+    .bg-video
+    {
+        width: auto;
+        height: 100%;
+    }
+}
+footer
+{
+    font-family: arial;
+    color: black;
+    clear: both;
+    position: relative;
+    height: 0;
+    margin-top: -57px;
+    
+}
+.top-nav
+{
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  color: aliceblue;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.top-nav:hover 
+{
+  box-shadow: inset 100px 0 0 0 rosybrown;
+  color: aliceblue;
+}
+.arrow {
+  box-sizing: border-box;
+  height: 5vw;
+  width: 5vw;
+  border-style: solid;
+  border-color: white;
+  border-width: 0px 1px 1px 0px;
+  transform: rotate(45deg);
+  transition: border-width 150ms ease-in-out;
+}
+
+.arrow:hover {
+  border-bottom-width: 4px;
+  border-right-width: 4px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  background-color: transparent;
+}
+#full /*this is the white background after the top area */
+{
+  height: 105vh;
+  background-color: white;
+}
+h3
+{
+  color: black;
+}
+h1
+{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+h2
+{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+</style>
+<!--------------------------- javascript ---------------------------->
+<script>
+    smoothScroll.init();
+    
+</script>
+<!------------------------------------------------------------------>
+<meta http-equiv="content-type" content="text/html"; charset="utf-8"/>
+</head>
+<body>
+<div class="hero">
+    <video autoplay loop muted plays-inline class="bg-video">
+        <source src="images/bg2.mp4" type="video/mp4">
+    </video>
+    <nav>
+        <a href="Homepage.html"><img src="images/logo.png" class="logo"></a>
+        <ul>
+            <li><a href="AboutUs.html" class="top-nav">About Us</a></li>
+            <li><a href="Rooms.html" class="top-nav">Rooms</a></li>
+            <li><a href="Pricing.html" class="top-nav">Pricing</a></li>
+            <li><a href="ContactUs.html" class="top-nav">Contact Us</a></li>
+            <li><a href="Booking.html" class="top-nav">Book Now</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+    <h1> Book Now </h1>
+<!-------------------------- arrow -----------------------------> 
+    <div class="container">
+    <a class="border" data-scroll href="#full"> 
+    <div class="arrow"></div>
+    </a>
+    </div>
+    </div>
+    </div>   
+    
+<!-------------------------- form -----------------------------> 
+<div id="full"> <!-- div id="full" responses with the arrow -->
+<html>
+ <head>
+
+     <link href="Booking.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+ <font color=saddlebrown face="arial">
+ <br>
+ <h1>Booking</h1>
+    
+ <form method="post" action="mailto:admin@tinyhotel.com" name="registration" onsubmit="return confirm('Do you want to submit this form?')"> <!-- i used "post" so that its encrypted -->
+     
+ <fieldset>
+     <legend>Particulars</legend>
+     <label>Name <em>*</em></label>
+     <input type="text" size="30" maxlength=100 required><br><br>
+
+     <label>Address<em>*</em></label>
+     <input type=text size=50 required><br><br>
+     
+     <label>Contact Number<em>*</em></label>
+     <input type="number" min=000000000 max=999999999999 required><br><br>
+     
+     <label>Email<em>*</em></label>
+     <input type="text" size=50 required><br><br>
+     
+     <label>Age<em>*</em></label>
+     <input type=number min=18 max=100 required><br><br>
+     
+     <label>Gender<em>*</em></label>
+     <input type="radio" name="gender" required>Male
+     <input type="radio" name="gender" required>Female<br><br>
+     
+ </fieldset>
+     <br><br>
+ <fieldset>
+     <legend>Room</legend>
+     <label>Select Package<em>*</em></label>
+     <select size="1">
+         <option>King</option>
+         <option>Deluxe</option>
+         <option>Premier</option>
+     </select>
+     <br><br>
+     <label>Number Of Guests<em>*</em></label>
+     <input type="checkbox">1
+     <input type="checkbox">2
+     <input type="checkbox">3
+     <input type="checkbox">4
+     <br><br>
+     <label>Check-In<em>*</em></label>
+     <input type="date"><br><br>
+     <label>Check-Out<em>*</em></label>
+     <input type="date"><br><br>
+     <label>Voucher Attachment (if any)</label>
+     <input type="file"><br><br>
+
+     <label>Comments:</label><br>
+     <textarea rows=3 cols=30></textarea> 
+
+     <br><br>
+     <input type="Submit" value="SUBMIT">
+     <input type="RESET" value="RESET">
+     <br><br>
+ </fieldset>
+ 
+ </form>
+ </font>
+     
+<!-------------------------- Footer ----------------------------->  
+<br><br><br><br><br>
+<footer>
+    <center><h3> Copyright &copy; Purrfect Label</h3></center>
+    <br>
+</footer>
+</body>
+</html>

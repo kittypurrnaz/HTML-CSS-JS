@@ -1,0 +1,49 @@
+body
+{
+background-color: white;
+background-repeat: repeat; 
+
+}
+em
+{
+color: red;
+font-weight: bold;
+}
+label
+{
+font-size: 14pt;
+color: black;
+font-family: "arial";
+border: 2px solid saddlebrown;
+display: inline-block;
+width: 250px;
+}
+fieldset
+{
+border: 4px double black;   
+}
+legend
+{
+    font-size: 14pt;
+    color: saddlebrown;
+    font-family: "arial"
+}
+input
+{
+    display: inline block;
+    width: 200px;
+}
+input[type=radio],[type=checkbox]
+{
+    display: inline-block;
+    width: 100px;
+}
+input[type=submit],[type=reset],[type=button]
+{
+    display: inline-block;
+    width: 120px;
+    /* text-align: center; */
+    background-color: brown;
+    color: white;
+    align-items: center;
+}

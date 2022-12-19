@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+<head>
+<title> Tiny Hotel </title>    
+<!------------------------- css ------------------------------------->
+<style>    
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+.hero
+{
+    width: 100%;
+    height: 100vh;
+    /* this is for the text overlay over the video */
+    background-image: linear-gradient(rgba(12,3,51,0.3),rgba(12,3,51,0.3));
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+nav
+{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .logo
+{
+    width: 70px;
+}
+nav ul li
+{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+nav ul li a
+{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 17px;
+}
+.content
+{
+    text-align: center;
+}
+.content h1
+{
+    font-size: 160px;
+    font-family: serif;
+    color: aliceblue;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.content h1:hover
+{
+    -webkit-text-stroke: 2px aliceblue;
+    color: transparent;
+}
+.content a
+{
+    text-decoration: none;
+    display: inline-block;
+    color: aliceblue;
+    font-size: 24px;
+    border: 0px solid aliceblue;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+}    
+.bg-video
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media (min-aspect-ratio: 16/9)
+{
+    .bg-video
+    {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9)
+{
+    .bg-video
+    {
+        width: auto;
+        height: 100%;
+    }
+}
+footer
+{
+    font-family: arial;
+    color: black;
+    clear: both;
+    position: relative;
+    height: 0;
+    margin-top: -57px;
+    
+}
+.top-nav
+{
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  color: aliceblue;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.top-nav:hover 
+{
+  box-shadow: inset 100px 0 0 0 rosybrown;
+  color: aliceblue;
+}
+.arrow {
+  box-sizing: border-box;
+  height: 5vw;
+  width: 5vw;
+  border-style: solid;
+  border-color: white;
+  border-width: 0px 1px 1px 0px;
+  transform: rotate(45deg);
+  transition: border-width 150ms ease-in-out;
+}
+
+.arrow:hover {
+  border-bottom-width: 4px;
+  border-right-width: 4px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  background-color: transparent;
+}
+#full /*this is the white background */
+{
+  height: 120vh;
+  background-color: white;
+}
+h3
+{
+  color: black;
+}
+h1
+{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+h2
+{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+</style>
+<!------------------------ javascript ------------------------------->
+<script>
+    smoothScroll.init();
+</script>
+<!------------------------------------------------------------------>
+<meta http-equiv="content-type" content="text/html"; charset="utf-8"/>
+</head>
+<body>
+<div class="hero">
+    <video autoplay loop muted plays-inline class="bg-video">
+        <source src="images/bg2.mp4" type="video/mp4">
+    </video>
+    <nav>
+        <a href="Homepage.html"><img src="images/logo.png" class="logo"></a>
+        <ul>
+            <li><a href="AboutUs.html" class="top-nav">About Us</a></li>
+            <li><a href="Rooms.html" class="top-nav">Rooms</a></li>
+            <li><a href="Pricing.html" class="top-nav">Pricing</a></li>
+            <li><a href="ContactUs.html" class="top-nav">Contact Us</a></li>
+            <li><a href="Booking.html" class="top-nav">Book Now</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+    <h1> Contact Us </h1>
+<!-------------------------- arrow -----------------------------> 
+    <div class="container">
+    <a class="border" data-scroll href="#full"> 
+    <div class="arrow"></div>
+    </a>
+    </div>
+    </div>
+    </div>   
+<!-------------------------- Location -----------------------------> 
+<div id="full">
+<br><br>
+<h1> Location </h1>  
+    <br><br>
+    <center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1974031.4031956762!2d147.68279029327718!3d-33.09735678647769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12796427bd7755%3A0xf017d68f9f2c3a0!2sBlue%20Mountains%20National%20Park!5e0!3m2!1sen!2ssg!4v1670485468679!5m2!1sen!2ssg" width="950" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></center><br><br>
+<!-------------------------- Enquiries ----------------------------->
+    <br>  
+<h2>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Email:&nbsp;<a href="mailto:admin@tinyhouse.com" onclick="return confirm('Would you like to email us?')">admin@tinyhouse.com </a>
+</h2>
+<h2>   
+    Telephone:&nbsp;<a href="tel:61-(02)123-4567" onclick="return confirm('Would you like to call our customer support?')">123-456-7890</a> <br>
+</h2>
+<h2>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Instagram:&nbsp;<a href="http://instagram.com/" onclick="return confirm('Would you like to visit our Instagram?')"> @TinyHotelOfficial </a><br>
+</h2>
+
+</div>
+    
+<footer>
+    <center><h3> Copyright &copy; Purrfect Label</h3></center>
+    <br>
+</footer>
+</body>
+</html>

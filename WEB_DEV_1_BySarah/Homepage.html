@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+<title> Tiny Hotel </title>
+<!------------------------------------------------------------------>
+<style>    
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+.hero
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(12,3,51,0.3),rgba(12,3,51,0.3));
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+nav
+{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .logo
+{
+    width: 70px;
+}
+nav ul li
+{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+nav ul li a
+{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 17px;
+}
+.content
+{
+    text-align: center;
+}
+.content h1
+{
+    font-size: 160px;
+    font-family: serif;
+    color: aliceblue;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.content h1:hover
+{
+    -webkit-text-stroke: 2px aliceblue;
+    color: transparent;
+}
+.content a
+{
+    text-decoration: none;
+    display: inline-block;
+    color: aliceblue;
+    font-size: 24px;
+    border: 2px solid aliceblue;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+}    
+.bg-video
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media (min-aspect-ratio: 16/9)
+{
+    .bg-video
+    {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9)
+{
+    .bg-video
+    {
+        width: auto;
+        height: 100%;
+    }
+}
+p
+{
+    color: aliceblue;
+}
+footer
+{
+    font-family: arial;
+    color: aliceblue;
+    clear: both;
+    position: relative;
+    height: 0;
+    margin-top: -40px;
+    
+}
+.book:hover 
+{
+    background-color: rosybrown;
+    transition: 0.5s;
+}
+.top-nav
+{
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  color: aliceblue;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.top-nav:hover 
+{
+  box-shadow: inset 100px 0 0 0 rosybrown;
+  color: aliceblue;
+}
+
+</style>
+<!------------------------- alert prompt ---------------------------->
+
+<script>
+alert("Welcome To Tiny Hotel!");    
+</script>
+    
+<!------------------------------------------------------------------>
+<meta http-equiv="content-type" content="text/html"; charset="utf-8"/>
+</head>
+<body>
+<div class="hero">
+    <video autoplay loop muted plays-inline class="bg-video">
+        <source src="images/bg1.mp4" type="video/mp4">
+    </video>
+    <nav>
+        <a href="Homepage.html"><img src="images/logo.png" class="logo"></a>
+        <ul>
+            <li><a href="AboutUs.html" class="top-nav">About Us</a></li>
+            <li><a href="Rooms.html" class="top-nav">Rooms</a></li>
+            <li><a href="Pricing.html" class="top-nav">Pricing</a></li>
+            <li><a href="ContactUs.html" class="top-nav">Contact Us</a></li>
+            <li><a href="Booking.html" class="top-nav">Book Now</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+    <h1> Tiny Hotel </h1>
+    <p>Building sustainable modular cabins that capitalises on the future of a uniquely <br>
+       ecological hotel and lodging industry.</p>
+    <a href="Booking.html" class="book" onclick="return confirm('Would you like to book a room now?')">BOOKING</a>
+    </div>
+</div>   
+<footer>
+    <center><h3> Copyright &copy; Purrfect Label</h3></center>
+</footer>
+</body>
+<br><br>
+<body>
+</body>
+</html>
+

@@ -1,0 +1,609 @@
+html
+{
+    scroll-behavior: smooth;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+#myVideo 
+{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000000;
+    animation: animateBg 10s linear infinite;
+}
+@keyframes animateBg
+{
+    0%
+    {
+        filter: hue-rotate(0deg);
+    }
+    100%
+    {
+        filter: hue-rotate(0deg);
+    }
+}
+section .loader
+{
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+section .loader span
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(calc(18deg*var(--i)))
+}
+section .loader span::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 0 10px white,
+                0 0 20px white,
+                0 0 40px white,
+                0 0 60px white,
+                0 0 80px white,
+                0 0 100px white;
+    animation: animate 2s linear infinite;
+    animation-delay: calc(0.1s * var(--i));
+    
+}
+
+@font-face 
+{
+    font-family: SourceCodePro-Regular; src: url('fonts/SourceCodePro-Regular.ttf'); 
+} 
+.SourceCodePro-Regular
+{
+    font-family: SourceCodePro-Regular;
+}
+/* -------------------------------------------------------*/
+.hero
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(12,3,51,0.3),rgba(12,3,51,0.3));
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+nav
+{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.top-nav
+{
+  box-shadow: inset 0 0 0 0 cyan;
+  color: #FFFBF8;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.top-nav:hover 
+{
+  box-shadow: inset 100px 0 0 0 cyan;
+  color: black;
+}
+
+nav .logo
+{
+    width: 70px;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+.logo:hover {
+    transform: translateY(-10px);
+}
+
+nav ul li
+{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+nav ul li a
+{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 17px;
+}
+.content
+{
+    text-align: center;
+    height: 250px;
+}
+.content h1
+{
+    font-size: 160px;
+    font-family: arial;
+    color: #FFFCF9;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.content h1:hover
+{
+    -webkit-text-stroke: 2px #FFFBF8;
+    color: transparent;
+}
+
+.content a
+{
+    text-decoration: none;
+    display: inline-block;
+    color: aliceblue;
+    font-size: 24px;
+    border: 0px solid aliceblue;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+.bg-video
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media (min-aspect-ratio: 16/9)
+{
+    .bg-video
+    {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9)
+{
+    .bg-video
+    {
+        width: auto;
+        height: 100%;
+    }
+}
+p
+{
+    color: aliceblue;
+}
+footer
+{
+    font-family: arial;
+    color: aliceblue;
+    clear: both;
+    position: relative;
+    height: 0;
+    margin-top: -40px;
+    
+}
+.btn
+{
+    color: aliceblue;
+    border: 1px solid #3498db;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: "Arial";
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+    top: 60px;
+}
+.btn1
+{
+    color: #3498db;
+}
+.btn1:hover
+{
+    color: #3498db;
+    letter-spacing: 0.1em;
+}
+.btn::before
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    /* background: #3498db; */
+    z-index: -1;
+    /* transition: 0.8s; */
+}
+.btn1::before
+{
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+.btn1:hover::before
+{
+    height: 180%;
+}
+/*---------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.wrapper
+{
+    width: 99%;
+}
+.wrapper .container
+{
+    padding-top: 0px;
+}
+.wrapper .container .hero-section
+{
+    width: 500%;
+    margin: 0px auto;
+    padding-top: 0px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+}
+.wrapper .container .hero-section .gallery
+{
+    width: 100%;
+    position: relative;
+    left: 7px;
+}
+.wrapper .container .hero-section .gallery .image-section
+{
+    width: 100%;
+}
+.wrapper .container .hero-section .gallery .image-section img
+{
+    width: 100%;
+    height: auto;
+    border: 1px solid #000; /* or #eee for black */
+    padding: 5px;
+    display: block;
+}
+.wrapper .container .hero-section .gallery .caption
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background: black; /*rgba(255,255,255,0.5)*/
+    color: #222;
+    opacity: 0;
+    transition: opacity 0.30s;
+}
+.wrapper .container .hero-section .gallery .caption:hover
+{
+    opacity: .7;
+    background-image: url(gifs/gif2.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    
+}
+h2
+{
+    color: black;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 130px;
+}
+
+
+/* --------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+h3
+{
+    font-family: monospace;
+    position: relative;
+    background-color: #ffffff;
+    background-clip: text;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: calc(1em / 16);
+    -webkit-background-clip: text;
+    color: #ffffff;
+    /* font-size: 2vmin;
+    font-weight: 700; */
+    padding: calc(calc(1em / 16) / 2);
+    letter-spacing: calc(1em / 8);
+    filter: brightness(0.3);
+    font-size: 1vh;
+    height: 0px;
+    display: block;
+}
+
+.text 
+{
+    font-size: 30px;
+    width:37em;
+    text-align:justify;
+    font-family: monospace;
+}
+.text:after {/* this adds an extra invisible line, so any other line is justified */
+    content:'';
+    display:inline-block;
+    width:100%;
+    vertical-align:top;
+}
+.bio
+{
+    height: 0px;
+    width: 0px;
+}
+.sign
+{
+    height: 0;
+    width: 0;
+}
+
+/*----------------------------------------------------------------*/
+
+.arrow {
+  box-sizing: border-box;
+  height: 5vw;
+  width: 5vw;
+  border-style: solid;
+  border-color: white;
+  border-width: 0px 1px 1px 0px;
+  transform: rotate(45deg);
+  transition: border-width 150ms ease-in-out;
+}
+
+.arrow:hover {
+  border-bottom-width: 4.5px;
+  border-right-width: 4.5px;
+  border-color: cyan;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  background-color: transparent;
+  height: 0vh;
+}
+
+.container2{
+    width: 90%;
+    height: 28vh;
+    display: flex;
+    align-items: center;
+    margin-left: 65px;
+    justify-content: center; /* center, left, right */
+
+    
+}
+/*-----------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Code+Pro:wght@200;400;500;600&display=swap');
+
+.containerfooter
+{
+    max-width: 1170px;
+    /* background-color: darkcyan; */
+    margin: auto;
+}
+.row
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul
+{
+    list-style: none;
+}
+.footer
+{
+    background-color: darkcyan;
+    padding: 68px 0; /*important*/
+    line-height: 1.1; /* or 1 */
+    font-family: 'Poppins', sans-serif;
+    height: 35vh;
+    left: 0vh;
+}
+@media (max-height: 767px)
+{
+  /* apply different styles for screens smaller than 768px */
+  .footer 
+    {
+        height: auto;
+        width: 100%;
+        padding: 10px;
+
+    }
+}
+.footer-col
+{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4
+{
+    font-size: 18px;
+    color: papayawhip;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+    font-family: 'Bebas Neue', arial, monospace;
+    opacity: .9;
+}
+.footer-col h4::before
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: darkturquoise;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+    opacity: .5;
+    
+}
+.footer-col ul li:not(:last-child)
+{
+    margin-bottom: 10px;
+}
+.footer-col ul li a
+{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: papayawhip;
+    text-decoration: none;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+    display: block;
+    transition: all 0.3s ease;
+    font-family: font-family: 'Bebas Neue', cursive;
+}
+.footer-col ul li a:hover
+{
+    color: papayawhip;
+    padding-left: 8px;
+}
+.footer-col .social-links a
+{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin: 0 30px 20px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: papayawhip;
+    transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover
+{
+    color: #24262b;
+    background-color: papayawhip;
+}
+
+@media(max-width: 767px)
+{
+    .footer-col
+    {
+        width: 50%;
+        margin-bottom: 30px;
+        
+    }
+}
+@media(max-width: 574px)
+{
+    .footer-col
+    {
+        width: 100%
+        
+    }
+}
+/*-----------------------------------------------------------------*/
+
+.popup 
+{
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1;
+    
+    width: 450px;
+    height: 120px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+/* Styling for the close button */
+.popup-close 
+{
+    font-family: monospace;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    font-family: arial;
+    width: 24px;
+    height: 24px;
+    background: #222;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 250;
+    line-height: 23px;
+    text-align: center;
+    border-radius: 50%;
+    align-items: center;
+    transition: all 0.25s ease-in-out;
+}
+.popup-close::before 
+{
+    color: black; /* Set the color of the 'x' symbol to white */
+    border: 0px solid black; /* Increase the border width to make the 'x' symbol bolder */
+    padding: 0px; /* Add some padding to the 'x' symbol to create some space between the symbol and the border */
+    transition: all 0.25s ease-in-out;
+}
+.popup-close:hover 
+{
+    background-color: red; /* change the background color on hover */
+    color: white; /* change the font color on hover */
+}
